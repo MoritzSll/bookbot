@@ -1,4 +1,4 @@
-from stats import count_words_in_string, count_caracters_in_string
+from stats import count_words_in_string, count_characters_in_string,sort_characters_count,create_clean_output
 
 def get_book_text(file_path):
     with open(file_path) as f:
@@ -7,7 +7,8 @@ def get_book_text(file_path):
     
 
 def main():
-    print(count_caracters_in_string(get_book_text("books/frankenstein.txt")))
+    text = get_book_text("books/frankenstein.txt")
+    create_clean_output(text)
 
 if __name__ == "__main__":
     main()
