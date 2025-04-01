@@ -19,13 +19,13 @@ def sort_characters_count(c_dict):
     sorted_dict = dict(sorted_items)
     return sorted_dict
 
-def create_clean_output(string):
+def create_clean_output(string, file_path):
     
     c_dict = count_characters_in_string(string)
     sorted_dict = sort_characters_count(c_dict)
     
     print("============ BOOKBOT ============")
-    print("Analyzing book found at books/frankenstein.txt...")
+    print("Analyzing book found at", file_path + "...")
     print("----------- Word Count ----------")
     print("Found", count_words_in_string(string), "total words")
     print("--------- Character Count -------")
